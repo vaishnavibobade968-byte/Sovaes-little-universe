@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sovae's Little Universe</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- INTRO -->
+  <header id="intro" class="section">
+    <h1 class="intro-title">Welcome to Sovae's world</h1>
+    <p class="subtitle">She lives where poems do.</p>
+  </header>
+
+  <!-- POEMS -->
+  <main id="poems-section" class="section">
+    <div class="poems-wrapper">
+      <!-- left / right arrows for desktop -->
+      <button class="nav-btn left" id="prevBtn" aria-label="Previous poem">◀</button>
+      <div id="poems" class="poems"></div>
+      <button class="nav-btn right" id="nextBtn" aria-label="Next poem">▶</button>
+    </div>
+  </main>
+
+  <!-- LETTERS -->
+  <section id="letters-section" class="section">
+    <div class="letters-overlay"></div>
+    <h2 class="letters-intro">Psst… secret letters floating here</h2>
+    <p class="letters-sub">Tap an envelope to open a little note 💌</p>
+
+    <div class="envelopes-container" id="envelopesContainer">
+      <div class="envelope" data-i="0"></div>
+      <div class="envelope" data-i="1"></div>
+      <div class="envelope" data-i="2"></div>
+      <div class="envelope" data-i="3"></div>
+      <div class="envelope" data-i="4"></div>
+      <div class="envelope" data-i="5"></div>
+      <div class="envelope" data-i="6"></div>
+      <div class="envelope" data-i="7"></div>
+      <div class="envelope" data-i="8"></div>
+      <div class="envelope" data-i="9"></div>
+    </div>
+
+    <div class="letter-popup" id="letterPopup" aria-hidden="true">
+      <div class="letter-content" id="letterContent"></div>
+      <small class="tap-to-close">tap anywhere to close</small>
+    </div>
+
+    <div class="hearts" id="hearts"></div>
+  </section>
+
+  <!-- COMMENTS -->
+  <section id="comments" class="section">
+    <h2 class="comments-title">Share your thoughts 💬</h2>
+
+    <div class="comment-box">
+      <input id="commentName" type="text" placeholder="Your name (optional)" />
+      <textarea id="commentInput" rows="3" placeholder="Write something kind..."></textarea>
+      <button id="sendBtn">Send</button>
+    </div>
+
+    <div id="commentsList" class="comments-list" aria-live="polite"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
